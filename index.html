@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body class="body">
+	<div class="background-video">
+		<video id="video-bg" muted="muted" autoplay="autoplay" loop="loop" object-fit: cover;"> <source src="img/awtc.mp4" type="video/mp4">
+	</div>
+	<div class="header-overlay">
+
+			<nav id="page-nav">
+				<div class="center-cntainer">
+					<label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger"/>
+					<img src="img/awtc logo.png">
+					<ul><a id="ticket" href="https://www.quicket.co.ke/events/75687-awtc19/#/">GET TICKET NOW</a></ul>
+					<ul><a href="">JOIN US</a></ul>
+					<ul><a href="">2018 RECAP</a></ul>
+					<ul><a href="">ABOUT AWTC</a></ul>
+				</div>
+			</nav>
+			<div class="center-cntainer">
+				<div class="content">
+					<h1>#AWTC19</h1>
+					<P>The largest women in tech gathering in Africa.Get your ticket to the <br> gathering now.</P>
+				</div>
+			</div>
+			<div class="center-cntainer">
+				<div class="white-bg-overlay">
+					<div class="white-bg-overlay-floatleft panel">
+						<h3>ABOUT AWTC</h3>
+						<p>AWTC is fast approaching and we are looking for individuals and, or companies that can contribute to a successful 	   event.
+						   AWTC is an opportunity to bring women from all around Africa and beyond together. The objective is to have an opportunity for women in technology to network and share valuable information. It is also an opportunity to learn and inspire. 
+						</p>
+						
+					</div>
+					<div class="white-bg-overlay-floatright panel">
+						<h3>Get a <a href="https://www.quicket.co.ke/events/75687-awtc19/#/"><span> ticket </span></a> before the days expire</h3>
+						<img src="img/pointer.png">
+						<p id="demo"></p>
+						
+					</div>
+				</div>
+			</div>
+			<div class="fadebue-bg">
+				
+			</div>
+	</div>
+
+
+<script>
+		var countDownDate = new Date("Nov 9, 2019 15:37:25").getTime();
+		var x = setInterval(function() {
+		  var now = new Date().getTime();
+		  var distance = countDownDate - now;
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		  document.getElementById("demo").innerHTML = days + "d:" + hours + "h:"
+		  + minutes + "m:" + seconds + "s";
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("demo").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+</script>
+</body>
+</html>
